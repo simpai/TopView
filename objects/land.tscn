@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1hqym5eifrnr"]
+
+[ext_resource type="Texture2D" uid="uid://dtsgg2h5uvajv" path="res://art/etc/charac_bt_jambo.png" id="1_3blnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxotv"]
+size = Vector2(328, 28)
+
+[node name="land" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(154, 4)
+shape = SubResource("RectangleShape2D_mxotv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(152.5, 3.5)
+scale = Vector2(2.69167, 0.225)
+texture = ExtResource("1_3blnd")

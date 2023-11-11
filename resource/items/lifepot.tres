@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dqbrac60bgmng"]
+
+[ext_resource type="Script" path="res://scripts/inventoryItem.gd" id="1_1pyn8"]
+[ext_resource type="Texture2D" uid="uid://c3lnc5vfsgnok" path="res://art/collectables/LifePot.png" id="2_sepnc"]
+
+[resource]
+script = ExtResource("1_1pyn8")
+name = "lifepot"
+texture = ExtResource("2_sepnc")
+maxStackAmount = 5

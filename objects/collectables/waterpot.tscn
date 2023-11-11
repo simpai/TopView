@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr7lmc1hbxo7j"]
+
+[ext_resource type="PackedScene" uid="uid://cx4bw3qi3jcii" path="res://objects/collectables/collectable.tscn" id="1_qbb7b"]
+[ext_resource type="Texture2D" uid="uid://cvfmr73oxq4l5" path="res://art/collectables/WaterPot.png" id="2_ic2yg"]
+[ext_resource type="Resource" uid="uid://j2k1sl63a6ht" path="res://resource/items/waterpot.tres" id="2_uiou4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pttyj"]
+resource_local_to_scene = true
+size = Vector2(8, 10)
+
+[node name="waterpot" instance=ExtResource("1_qbb7b")]
+itemRes = ExtResource("2_uiou4")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_pttyj")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_ic2yg")

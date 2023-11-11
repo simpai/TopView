@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://0eer2x7yhlxl"]
+
+[ext_resource type="Script" path="res://GUI/slot.gd" id="1_5h7ff"]
+[ext_resource type="Texture2D" uid="uid://nofoa10406uf" path="res://art/ui/inventorySlot.png" id="1_eks3a"]
+[ext_resource type="Texture2D" uid="uid://c3lnc5vfsgnok" path="res://art/collectables/LifePot.png" id="3_jbew7"]
+[ext_resource type="FontFile" uid="uid://coalem67xgl0i" path="res://art/NormalFont.ttf" id="4_58qgg"]
+
+[node name="slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_5h7ff")
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_eks3a")
+centered = false
+vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
+texture = ExtResource("3_jbew7")
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 9.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.733333)
+theme_override_fonts/font = ExtResource("4_58qgg")
+theme_override_font_sizes/font_size = 9
+text = "9"
+horizontal_alignment = 2
